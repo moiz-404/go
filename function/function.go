@@ -11,6 +11,10 @@ func plusPlus(a, b, c int) int {
 	return a + b + c
 }
 
+func test(my_func func(int) int) {
+	fmt.Println(my_func(7))
+}
+
 func main() {
 
 	res := plus(1, 2)
@@ -18,4 +22,9 @@ func main() {
 
 	res = plusPlus(1, 2, 3)
 	fmt.Println("1+2+3 =", res)
+
+	test_func := func(x int) int {
+		return x * 7
+	}
+	test(test_func)
 }
