@@ -15,6 +15,10 @@ func test(my_func func(int) int) {
 	fmt.Println(my_func(7))
 }
 
+func swap(x, y string) (string, string) {
+	return y, x
+}
+
 func main() {
 
 	res := plus(1, 2)
@@ -27,4 +31,7 @@ func main() {
 		return x * 7
 	}
 	test(test_func)
+
+	a, b := swap("Mahesh", "Kumar")
+	fmt.Println(a, b)
 }
